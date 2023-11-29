@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Vote";
+}
+<h1>Vote</h1>
+<p>
+    <button class="btn btn-outline-primary mx-2" id="pie-vote">Vote For Pie</button>
+    <button class="btn btn-outline-success mx-2" id="bacon-vote">Vote For Bacon</button>
+</p>
+<p id="pie-count"></p>
+<p id="bacon-count"></p>
+
+@section Scripts{
+    <script>
+        let connection = new signalR.HubConnectionBuilder()
+            .configureLogging(signalR.LogLevel.Trace)
+            .withUrl("/hubs/vote")
+            .build();
+
+        connection.on("updateVotes", function (value) {
+            updateVote(value);
+        })
+        document.getElementById("pie-vote").addEventListener('click', function () {
+            connection.invoke("Vote","Pie")
+        })
+        document.getElementById("bacon-vote").addEventListener('click', function () {
+            connection.invoke("Vote", "Bacon")
+        })
+        //startConnection
+        function startSuccess() {
+            console.log("Connected.");
+            connection.invoke("GetCurrentVotes").then(function (value) {
+                updateVote(value)
+            })
+        }
+        function updateVote(value) {
+            var pie = document.getElementById("pie-count");
+            var bacon = document.getElementById("bacon-count");
+            pie.innerText = "pie votes : " + value["Pie"].toString();
+            bacon.innerText = "bacon votes : " + value["Bacon"].toString();
+        }
+        function startFail() {
+            console.log("Connection Failed.");
+        }
+        connection.start().then(startSuccess, startFail);
+    </script>
+}

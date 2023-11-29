@@ -1,9 +1,11 @@
 using signalr.Hubs;
+using signalr.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IVoteManager,VoteManager>();
 builder.Services.AddSignalR();
 builder.Logging.AddFilter("Microsoft.AspNetCore.SignalR", LogLevel.None);
 builder.Logging.AddFilter("Microsoft.AspNetCore.Http.Connections", LogLevel.None);
@@ -36,4 +38,5 @@ app.MapHub<ChatHub>("/chatHub");
 app.MapHub<ViewHub>("/hubs/view");
 app.MapHub<StringToolsHub>("/hubs/stringtools");
 app.MapHub<ColorHub>("/hubs/color");
+app.MapHub<VoteHub>("/hubs/vote");
 app.Run();

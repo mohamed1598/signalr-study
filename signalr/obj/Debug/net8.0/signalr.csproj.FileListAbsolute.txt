@@ -30,3 +30,35 @@ D:\tasks\csharp\.NET CORE\study\signalr\signalr\obj\Debug\net8.0\refint\signalr.
 D:\tasks\csharp\.NET CORE\study\signalr\signalr\obj\Debug\net8.0\signalr.pdb
 D:\tasks\csharp\.NET CORE\study\signalr\signalr\obj\Debug\net8.0\signalr.genruntimeconfig.cache
 D:\tasks\csharp\.NET CORE\study\signalr\signalr\obj\Debug\net8.0\ref\signalr.dll
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.GeneratedMSBuildEditorConfig.editorconfig
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.AssemblyInfoInputs.cache
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.AssemblyInfo.cs
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.csproj.CoreCompileInputs.cache
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.MvcApplicationPartsAssemblyInfo.cache
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.RazorAssemblyInfo.cache
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.RazorAssemblyInfo.cs
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.sourcelink.json
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.dll
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\refint\signalr.dll
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.pdb
+D:\New folder\New folder\signalr\signalr\bin\Debug\net8.0\appsettings.Development.json
+D:\New folder\New folder\signalr\signalr\bin\Debug\net8.0\appsettings.json
+D:\New folder\New folder\signalr\signalr\bin\Debug\net8.0\libman.json
+D:\New folder\New folder\signalr\signalr\bin\Debug\net8.0\signalr.staticwebassets.runtime.json
+D:\New folder\New folder\signalr\signalr\bin\Debug\net8.0\signalr.exe
+D:\New folder\New folder\signalr\signalr\bin\Debug\net8.0\signalr.deps.json
+D:\New folder\New folder\signalr\signalr\bin\Debug\net8.0\signalr.runtimeconfig.json
+D:\New folder\New folder\signalr\signalr\bin\Debug\net8.0\signalr.dll
+D:\New folder\New folder\signalr\signalr\bin\Debug\net8.0\signalr.pdb
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\staticwebassets.build.json
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\staticwebassets.development.json
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\staticwebassets\msbuild.signalr.Microsoft.AspNetCore.StaticWebAssets.props
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\staticwebassets\msbuild.build.signalr.props
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.signalr.props
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.signalr.props
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\staticwebassets.pack.json
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\scopedcss\bundle\signalr.styles.css
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\scopedcss\projectbundle\signalr.bundle.scp.css
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\signalr.genruntimeconfig.cache
+D:\New folder\New folder\signalr\signalr\obj\Debug\net8.0\ref\signalr.dll
