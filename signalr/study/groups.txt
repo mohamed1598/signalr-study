@@ -1,0 +1,2 @@
+﻿await Groups.AddToGroupAsync(Context.ConnectionId,"Green");
+await Groups.RemoveGroupAsync(Context.ConnectionId,"Green");

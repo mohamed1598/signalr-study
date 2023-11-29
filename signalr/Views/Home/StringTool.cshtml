@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "string tools";
+}
+<h1>Name Concat</h1>
+<p>
+    <input id="inputFirstName" />
+    <input id="inputLastName" />
+
+    <button id="btnGetFullName">Get Full Name</button>
+</p>
+
+@section Scripts{
+    <script>
+        let connection = new signalR.HubConnectionBuilder()
+            /*.configureLogging(signalR.LogLevel.None)*/
+            .configureLogging(signalR.LogLevel.Trace)
+            .withUrl("/hubs/stringtools")//, { transport: signalR.HttpTransportType.LongPolling }
+            //transport: signalR.HttpTransportType.WebSockets | signalR.HttpTransportType.ServerSentEvents
+            .build();
+        let btn = document.getElementById("btnGetFullName");
+        btn.addEventListener("click", function (evt) {
+            var firstName = document.getElementById("inputFirstName").value;
+            var lastName = document.getElementById("inputLastName").value;
+            connection.invoke("getFullName", firstName, lastName).then(function (val) {
+                alert(val);
+            })
+        })
+
+
+
+        //startConnection
+        function startSuccess() {
+            console.log("Connected.");
+        }
+        function startFail() {
+            console.log("Connection Failed.");
+        }
+        connection.start().then(startSuccess, startFail);
+    </script>
+}

@@ -1,0 +1,16 @@
+﻿
+Clients.All.SendAsync("serverMethodname",ViewCount)
+Clients.Caller.SendAsync("serverMethodname",ViewCount)
+Clients.Others.SendAsync("serverMethodname",ViewCount)
+//using client id
+Clients.AllExcept("C","E").SendAsync("serverMethodname",ViewCount) //can send ienumerable
+Clients.Clients("D","F").SendAsync("serverMethodname",ViewCount)
+Clients.Client("D").SendAsync("serverMethodname",ViewCount)
+//using identity userid
+Clients.User("kevin").SendAsync("serverMethodname",ViewCount)
+Clients.Users("kevin","sally").SendAsync("serverMethodname",ViewCount)
+
+Clients.Group("orange").SendAsync("serverMethodname",ViewCount)
+Clients.GroupExcept("orange","E").SendAsync("serverMethodname",ViewCount) //E is client id
+Clients.Groups("yellow","orange").SendAsync("serverMethodname",ViewCount)
+Clients.OthersInGroup("yellow").SendAsync("serverMethodname",ViewCount)

@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Color Grouping";
+}
+
+<h1>Groups</h1>
+<button id="btnJoinYellow">Join Yellow</button>
+<button id="btnJoinBlue">Join Blue</button>
+<button id="btnJoinOrange">Join Orange</button>
+<br />
+<br />
+<button id="btnTriggerYellow">Trigger Yellow</button>
+<button id="btnTriggerBlue">Trigger Blue</button>
+<button id="btnTriggerOrange">Trigger Orange</button>
+
+@section Scripts{
+    <script>
+        let connection = new signalR.HubConnectionBuilder()
+            .withUrl("/hubs/color")
+            .build();
+        document.getElementById("btnJoinYellow").addEventListener('click', function () {
+            connection.invoke("JoinGroup", "Yellow");
+        });
+        document.getElementById("btnJoinBlue").addEventListener('click', function () {
+            connection.invoke("JoinGroup", "Blue");
+        });
+        document.getElementById("btnJoinOrange").addEventListener('click', function () {
+            connection.invoke("JoinGroup", "Orange");
+        });
+        document.getElementById("btnTriggerYellow").addEventListener('click', function () {
+            connection.invoke("TriggerGroup", "Yellow");
+        });
+        document.getElementById("btnTriggerBlue").addEventListener('click', function () {
+            connection.invoke("TriggerGroup", "Blue");
+        });
+        document.getElementById("btnTriggerOrange").addEventListener('click', function () {
+            connection.invoke("TriggerGroup", "Orange");
+        });
+
+        connection.on("triggerColor", function (color) {
+            console.log(color);
+            document.getElementById("body").style.backgroundColor = color;
+        });
+        //startConnection
+        function startSuccess() {
+            console.log("Connected.");
+        }
+        function startFail() {
+            console.log("Connection Failed.");
+        }
+        connection.start().then(startSuccess, startFail);
+    </script>
+    
+}
