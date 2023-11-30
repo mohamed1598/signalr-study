@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "62nK1lq3uZ/Q2rBnZ4WSBUVHCxyopte30kUZBVBIG1bhn5Aknlu3X6trTmlYWD1VL+1F4SAnrVDd76PoqJBvWw==",
+  "dgSpecHash": "IcMf1X9BJ7+aukiQ0z2MtzStVKlyjY1nQ1psYSy9QjY18fVyCZ+rB/CSA0NQ4THnhqbnoUoVUio/f1m8+CpHcA==",
   "success": true,
-  "projectFilePath": "D:\\tasks\\csharp\\.NET CORE\\study\\signalr\\signalr\\signalr.csproj",
+  "projectFilePath": "D:\\New folder\\New folder\\signalr\\signalr\\signalr.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -8,32 +8,34 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Mohamed Elshafey\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\MohamedIB\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\tasks\\csharp\\.NET CORE\\study\\signalr\\signalr\\signalr.csproj",
+      "projectUniqueName": "D:\\New folder\\New folder\\signalr\\signalr\\signalr.csproj",
       "projectName": "signalr",
-      "projectPath": "D:\\tasks\\csharp\\.NET CORE\\study\\signalr\\signalr\\signalr.csproj",
-      "packagesPath": "C:\\Users\\Mohamed Elshafey\\.nuget\\packages\\",
-      "outputPath": "D:\\tasks\\csharp\\.NET CORE\\study\\signalr\\signalr\\obj\\",
+      "projectPath": "D:\\New folder\\New folder\\signalr\\signalr\\signalr.csproj",
+      "packagesPath": "C:\\Users\\MohamedIB\\.nuget\\packages\\",
+      "outputPath": "D:\\New folder\\New folder\\signalr\\signalr\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mohamed Elshafey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MohamedIB\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
