@@ -6,6 +6,7 @@ let viewConnection = new signalR.HubConnectionBuilder()
     .configureLogging(signalR.LogLevel.Trace)
     .withUrl("/hubs/view")//, { transport: signalR.HttpTransportType.LongPolling }
     //transport: signalR.HttpTransportType.WebSockets | signalR.HttpTransportType.ServerSentEvents
+    .withAutomaticReconnect()
     .build();
 
 //on view update message from client
@@ -27,9 +28,27 @@ function notify() {
 //startConnection
 function startSuccess() {
     console.log("Connected.");
-    notify();
+    //notify();
 }
 function startFail() {
     console.log("Connection Failed.");
 }
 viewConnection.start().then(startSuccess, startFail);
+
+let body = document.getElementsByTagName("body")[0];
+
+viewConnection.onreconnected((connectionId) => {
+    body.style.backgroundColor = "green";
+
+    setTimeout(() => {
+        body.style.backgroundColor = "white";
+    }, 500000);
+});
+
+viewConnection.onreconnecting((error) => {
+    body.style.backgroundColor = "yellow";
+});
+
+viewConnection.onclose((error) => {
+    body.style.backgroundColor = "red";
+});

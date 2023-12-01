@@ -1,0 +1,29 @@
+let viewConnection = new signalR.HubConnectionBuilder()
+    .configureLogging(signalR.LogLevel.Trace)
+    .withUrl("/hubs/view")
+    .withAutomaticReconnect()    to reconnect can take an array of reconnect delays
+    .build();
+
+
+client events:
+    onreconnected:
+        viewConnection.onreconnected((connectionId) => {
+        });
+    onreconnecting:
+        viewConnection.onreconnecting((error) => {
+        });
+    onclose:
+        viewConnection.onclose((error) => {
+        });
+
+ server events:
+    OnConnectedAsync:
+        public async override Task OnConnectedAsync()
+        {
+            await base.OnConnectedAsync();
+        }
+    OnDisconnectedAsync:
+        public async override Task OnDisconnectedAsync(Exception exception)
+        {
+            await base.OnDisconnectedAsync(exception);
+        }

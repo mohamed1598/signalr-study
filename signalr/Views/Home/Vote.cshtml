@@ -16,19 +16,19 @@
             .withUrl("/hubs/vote")
             .build();
 
-        connection.on("updateVotes", function (value) {
+        connection.on("updateVotes", (value)=> {
             updateVote(value);
         })
-        document.getElementById("pie-vote").addEventListener('click', function () {
+        document.getElementById("pie-vote").addEventListener('click', ()=> {
             connection.invoke("Vote","Pie")
         })
-        document.getElementById("bacon-vote").addEventListener('click', function () {
+        document.getElementById("bacon-vote").addEventListener('click', ()=> {
             connection.invoke("Vote", "Bacon")
         })
         //startConnection
         function startSuccess() {
             console.log("Connected.");
-            connection.invoke("GetCurrentVotes").then(function (value) {
+            connection.invoke("GetCurrentVotes").then((value)=> {
                 updateVote(value)
             })
         }
