@@ -34,6 +34,10 @@ namespace signalr.Controllers
         {
             return View();
         }
+        public IActionResult Time()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

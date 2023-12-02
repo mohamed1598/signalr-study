@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using static signalr.Hubs.ViewHub;
 
 namespace signalr.Hubs
 {
-    public class ViewHub:Hub
+    public class ViewHub:Hub<IHubClient>
     {
         public static int ViewCount { get; set; } = 0;
 
@@ -18,13 +19,14 @@ namespace signalr.Hubs
             ViewCount++;
 
             // notify everyone about new view count
-            return Clients.All.SendAsync("ViewCountUpdate", ViewCount);
+            //return Clients.All.SendAsync("ViewCountUpdate", ViewCount);
+            return Clients.All.ViewCountUpdate(ViewCount);
         }
         public async override Task OnConnectedAsync()
         {
             ViewCount++;
 
-            await this.Clients.All.SendAsync("viewCountUpdate", ViewCount);
+            await this.Clients.All.ViewCountUpdate(ViewCount); ;
 
             await base.OnConnectedAsync();
         }
@@ -32,9 +34,13 @@ namespace signalr.Hubs
         {
             ViewCount--;
 
-            await this.Clients.All.SendAsync("viewCountUpdate", ViewCount);
+            await this.Clients.All.ViewCountUpdate(ViewCount); ;
 
             await base.OnDisconnectedAsync(exception);
+        }
+        public interface IHubClient
+        {
+            Task ViewCountUpdate(int viewCount);
         }
     }
 }

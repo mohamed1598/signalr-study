@@ -1,5 +1,6 @@
 using signalr.Hubs;
 using signalr.Services;
+using signalr.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ builder.Services.AddTransient<IVoteManager,VoteManager>();
 builder.Services.AddSignalR();
 builder.Logging.AddFilter("Microsoft.AspNetCore.SignalR", LogLevel.None);
 builder.Logging.AddFilter("Microsoft.AspNetCore.Http.Connections", LogLevel.None);
+builder.Services.AddHostedService<TimeService>();
 //builder.Host.ConfigureLogging(logging =>
 //{
 //    logging.AddFilter("Microsoft.AspNetCore.SignalR", LogLevel.Trace);
@@ -39,4 +41,5 @@ app.MapHub<ViewHub>("/hubs/view");
 app.MapHub<StringToolsHub>("/hubs/stringtools");
 app.MapHub<ColorHub>("/hubs/color");
 app.MapHub<VoteHub>("/hubs/vote");
+app.MapHub<TimeHub>("/hubs/time");
 app.Run();
